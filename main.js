@@ -61,11 +61,12 @@ const start = async () => {
             // Первый уровень рефералов
             reff1 = `Первый уровень рефералов ${results.length}:\n`
             sql_level_1 = ''
-            
+            i = 0
             results.forEach(one => {
-                if (reff1 !== ''){
+                if (i !== 0){
                     sql_level_1 = `${sql_level_1} OR reff_id = ${one['tg_id']}`
                 }
+                i += 1
                 reff1 = `${reff1}${one["first_name"]}, `
             });
 
@@ -230,7 +231,7 @@ const start = async () => {
             return
         }
         bot.getMe().then(function (info) {
-          ans_text = `Вот твоя реферальная ссылка\nКому я плачу /i_pay\nКого я привлек /i_mentor\nОтправьте число для проверки отчислений
+          ans_text = `Вот твоя реферальная ссылка\nКвому я плачу /i_pay\nКого я привлек /i_mentor\nОтправьте число для проверки отчислений
           \n\nhttps://t.me/${info.username}?start=reff${user_id}`
           bot.sendMessage(user_id, ans_text)
           });
