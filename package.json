@@ -1,0 +1,28 @@
+{
+  "name": "refferal-tg-bot-5-levels",
+  "version": "1.0.0",
+  "description": "Bot on js 5 levels ref system",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon main.js",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/windownik/refferal-tg-bot-5-levels.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/windownik/refferal-tg-bot-5-levels/issues"
+  },
+  "homepage": "https://github.com/windownik/refferal-tg-bot-5-levels#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.60.0",
+    "nodemon": "^2.0.20",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.26.0"
+  }
+}
