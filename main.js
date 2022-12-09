@@ -133,7 +133,7 @@ async function i_mentor_comand(user_id) {
         reff4 = `${reff4}${four["first_name"]}, `
     });
 
-    const result5 = await sequelize.query(`SELECT tg_id, first_name FROM all_users WHERE reff_id = ${result4[0]['tg_id']}${sql_level_4}`)[0]
+    const result5 = (await sequelize.query(`SELECT tg_id, first_name FROM all_users WHERE reff_id = ${result4[0]['tg_id']}${sql_level_4}`))[0]
     if (result4.length === 0) {
         bot.sendMessage(user_id, reff4)
         return
